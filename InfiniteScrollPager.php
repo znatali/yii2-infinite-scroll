@@ -248,8 +248,13 @@ class InfiniteScrollPager extends Widget
         }
         $contentLoadedCallback = Json::encode($this->contentLoadedCallback);
 
-        $this->view->registerJs("$('" . $this->pluginOptions['contentSelector'] . "').infinitescroll(" . $pluginOptions . ", " . $contentLoadedCallback . ");",
-            View::POS_END, $this->widgetId . '-infinite-scroll');
+        if (empty($contentLoadedCallback)) {
+            $this->view->registerJs("$('" . $this->pluginOptions['contentSelector'] . "').infinitescroll(" . $pluginOptions . ");",
+                View::POS_END, $this->widgetId . '-infinite-scroll');
+        } else {
+            $this->view->registerJs("$('" . $this->pluginOptions['contentSelector'] . "').infinitescroll(" . $pluginOptions . ", " . $contentLoadedCallback . ");",
+                View::POS_END, $this->widgetId . '-infinite-scroll');
+        }
     }
 }
 
