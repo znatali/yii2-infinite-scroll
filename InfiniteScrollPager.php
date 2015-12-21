@@ -37,6 +37,7 @@ class InfiniteScrollPager extends Widget
     const BEHAVIOR_LOCAL = 'local';
     const BEHAVIOR_MASONRY = 'masonry';
     const BEHAVIOR_CUFON = 'cufon';
+    const BEHAVIOR_CUSTOM_CUFON = 'custom_cufon';
 
     /**
      * @var string owner widget id
@@ -121,6 +122,9 @@ class InfiniteScrollPager extends Widget
                     break;
                 case self::BEHAVIOR_CUFON:
                     $behaviorAsset = 'cufon.js';
+                    break;
+   	 	case self::BEHAVIOR_CUSTOM_CUFON:
+                    $behaviorAsset = 'custom_cufon.js';
                     break;
                 default:
                     throw new InvalidConfigException('Unknown "behavior" specified.');
