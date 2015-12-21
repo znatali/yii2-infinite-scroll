@@ -14,6 +14,11 @@
         "issues": "https://github.com/nirvana-msu/yii2-infinite-scroll/issues",
         "source": "https://github.com/nirvana-msu/yii2-infinite-scroll"
     },
+    "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/znatali/infinite-scroll.git"
+    }
     "authors": [
         {
             "name": "Alexander Stepanov",
