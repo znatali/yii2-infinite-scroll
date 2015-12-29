@@ -28,7 +28,7 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "bower-asset/jquery-infinite-scroll": "*"
+        "bower-asset/jquery-infinite-scroll": "1.0.*@dev"
     },
     "autoload": {
         "psr-4": {
